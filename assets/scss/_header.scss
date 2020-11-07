@@ -1,0 +1,109 @@
+.header{
+    width: 100%;
+    padding-bottom: 40px;
+    .header-content{
+        background: $backgroundColor;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 15px 60px 0;
+        height: 88px;
+        z-index: 10;
+
+        .logo{
+            float: left;
+            
+            h1{
+                color: $textColor1;
+                font-size: 1.5rem;
+                letter-spacing: 1.8px;
+                font-weight: 300;
+                padding-top: 14px;
+            }
+
+            a{
+                text-decoration: none;
+            }
+        }
+
+        .menu{
+            float: right;
+
+            
+            a{
+                text-decoration: none;
+                color: $textColor2; 
+                font-size: 1rem; 
+                letter-spacing: 2px;
+                padding: 0 10px;
+                font-weight: 300;
+                padding-bottom: 4px;
+
+
+            }
+
+            .btn-style{
+                border: none;
+                text-decoration: none;
+                color: $white;
+                font-size: 1rem;
+                padding: 0;
+            }
+            button{
+                background: $buttonColor;
+                border: none;
+                text-decoration: none;
+                color: $white;
+                font-size: 1rem;
+                padding: 18px 24px;
+                cursor: pointer;
+                outline: none;
+
+                &:hover{
+                    opacity: .7;
+                }
+                &:active {
+                    box-shadow: 0 1px gray;
+                    transform: translate(.2px,.2px);
+                 }
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+                
+              }
+              
+            .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: $backgroundColor;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 2px;
+            
+            
+            }
+            
+            .dropdown-content a {
+            padding: 16px 8px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+            
+            .dropdown-content a:hover {
+                color: black;
+            }
+            
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            
+        }
+
+
+    }
+}

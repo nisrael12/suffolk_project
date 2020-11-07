@@ -1,0 +1,42 @@
+.wrapper-container{
+    padding: 0 60px;
+
+    .amenties-container{
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        .amenties-content{
+            margin-bottom: 120px;
+            .title{
+                margin-bottom: 60px;
+
+                h1{
+                    text-align: center;
+                    font-size: 2.5rem; 
+                    font-weight: 300;
+                }
+    
+            }
+    
+            .amenties{
+                text-align: center;
+                padding: 45px 0;
+                h3{
+                    font-size: 1.8rem;
+                    font-weight: 300;
+                    font-style: italic; 
+                    margin-bottom: 45px;
+                }
+
+                p{
+                    font-size: 1.2rem ;
+                    font-weight: 300;
+                }
+    
+            }
+        }
+
+    }
+}

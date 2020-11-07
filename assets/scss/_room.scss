@@ -1,0 +1,51 @@
+.wrapper-container{
+    padding: 0 60px;
+
+    .room-container{
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        .room-content{
+            margin-bottom: 120px;
+            .title{
+                margin-bottom: 60px;
+
+                h1{
+                    text-align: center;
+                    font-size: 2.5rem; 
+                    font-weight: 300;
+                }
+            }
+            .rate-container{
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 180px;
+                .rates{
+                    max-width: 400px;
+                    text-align: center;
+                    padding: 45px 0;
+                        h5{
+                            font-size: 1.8rem;
+                            font-weight: 300;
+                            font-style: italic; 
+                            margin-bottom: 45px;
+                        }
+                        .price{
+                            margin-bottom: 45px;
+                        }
+        
+                        p{
+                            font-size: 1.3rem;
+                            font-weight: 300;
+                        }
+                }
+    
+            }
+    
+        }
+
+    }
+}

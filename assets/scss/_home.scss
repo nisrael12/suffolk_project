@@ -1,0 +1,171 @@
+.wrapper-container{
+    padding: 0 60px;
+    
+    
+    .photo-1{
+        
+        .photo-container{
+            position: relative;
+            text-align: center;
+            
+            .book{
+                position: absolute;
+                top: 50% !important;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 65%;
+                z-index: 1;
+
+                h1{
+                    font-size: 3.5rem;
+                    font-weight: 300;
+                    text-transform: capitalize;
+                    color: $white;
+                    line-height: 1.3;
+                    margin-bottom: 1.5rem;
+                }
+                button{
+                    background: $white;
+                    border: none;
+                    text-decoration: none;
+                    color: $textColor1;
+                    font-size: 1rem;
+                    padding: 18px 24px;
+                    outline: none;
+
+                    &:hover{
+                        opacity: .9;
+                    }
+                    
+                    &:active {
+                        box-shadow: 0 1px gray;
+                        transform: translate(.2px,.2px);
+                     }
+                }
+
+            }
+    
+            img{
+                position: relative;
+                width: 100%;
+                height: 800px;
+                object-fit: cover;
+                z-index: -1;
+                filter: brightness(.8) ;
+                
+            }
+            
+            
+        }
+    }
+
+    .top-message{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin: 90px 0;
+        h3{
+            align-items: center;
+            font-size: 1.8rem;
+            text-align: center;
+            font-weight: 300;
+            max-width: 50%;
+            line-height: 1.5;
+            
+        }
+    }
+
+    .info-content{
+        margin-bottom: 90px;
+
+        .info-wrapper{
+            display: flex;
+            justify-content: center;
+            
+            .rooms{
+                margin-right: 20px;
+            }
+            .amenties{
+                margin-left: 20px;
+            }
+            .rooms, .amenties{
+                align-items: center;
+                text-align: center;
+                max-width: 600px;
+                color: $textColor2;
+                
+                img{
+                width: 600px;
+                }
+                
+                
+                h4{
+                    font-size: 2rem;
+                    text-transform: capitalize;
+                    margin: 20px 0;
+                    font-weight: 300;
+                }
+
+                p{
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    white-space: pre-wrap;
+                    margin-bottom: 20px;
+                    line-height: 1.5;
+                    
+                }
+
+                a{
+                    text-transform: capitalize;
+                    color: $textColor2;
+                    font-weight: 300;
+                    letter-spacing: 2px;
+
+                }
+
+
+            }
+        }
+    }
+
+    .photo-2{
+        margin-bottom: 120px;
+        
+        .photo-container{
+            position: relative;
+            text-align: center;
+            
+            .book{
+                position: absolute;
+                top: 50% !important;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 65%;
+                z-index: 1;
+
+                a{
+                    font-size: 3.5rem;
+                    font-weight: 300;
+                    text-transform: capitalize;
+                    color: $white;
+                    line-height: 1.3;
+                    text-decoration: none;
+                    border-bottom: 2px solid $white;
+                }
+
+            }
+    
+            img{
+                position: relative;
+                width: 100%;
+                height: 800px;
+                object-fit: cover;
+                z-index: -1;
+                filter: brightness(.8) ;
+                
+            }
+            
+            
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.wrapper-container{
+    padding: 0 60px;
+
+    .visit-container{
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        .visit-content{
+            margin-bottom: 120px;
+            .title{
+                margin-bottom: 45px;
+
+                h1{
+                    text-align: center;
+                    font-size: 2.5rem; 
+                    font-weight: 300;
+                }
+                
+            }
+            
+            .visit{
+                text-align: center;
+                h6{
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                }
+                
+                p{
+                    font-size: 1.1rem ;
+                    font-weight: 300;
+                    line-height: 2;
+                    padding-bottom: 15px;
+                }
+                
+    
+            }
+        }
+
+    }
+}

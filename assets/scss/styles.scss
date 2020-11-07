@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import "reset";
+@import "variables";
+@import "header";
+@import "home";
+@import "amenties";
+@import "room";
+@import "gallery";
+@import "visit";
+@import "contact";
+@import "book";
+@import "footer";
+
+
+
+body {
+  line-height: 1;
+  background: $backgroundColor;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "proxima-nova",Helvetica,"Helvetica Neue",Arial,sans-serif; 
+}

@@ -1,0 +1,100 @@
+.wrapper-container{
+    padding: 0 60px;
+
+    .contact-container{
+        margin-top: 7%;
+        display: flex;
+        justify-content: center;
+
+        .contact{
+            margin-bottom: 120px;
+            width: 600px;
+            .title{
+                margin-bottom: 45px;
+
+                h1{
+                    text-align: center;
+                    font-size: 2.5rem; 
+                    font-weight: 300;
+                    margin-bottom: 45px;
+                }
+                
+                p{
+                    font-size: 1.1rem ;
+                    font-weight: 300;
+                    padding-bottom: 15px;
+                    text-align: center;
+                    line-height: 1.5;
+                }
+            }
+
+            .form-field{
+                margin-bottom: 15px;
+            }
+
+            .name{
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 20px;
+
+                .name-style{
+                    font-size: .8rem !important;
+                    margin-top: 10px;
+                }
+                
+                label{
+                    width: 100%;
+                    float: left;
+
+                }
+            }
+
+            label{
+                display: block;
+                float: left;
+                font-weight: 300;
+                margin-bottom: 10px;
+            }
+
+            span{
+                font-size: 1.5rem;
+            }
+
+            input[type=text], input[type=email], textarea{
+                padding: 10px;
+                width: 100%;
+                outline: none;
+
+                &:focus {
+                    border: 2px solid $textColor1;
+                }
+            }
+
+            input[type=email]{
+                width: 100%;
+            }
+
+            button{
+                background: $buttonColor;
+                border: none;
+                text-decoration: none;
+                color: $white;
+                font-size: 1rem;
+                padding: 26px 40px;
+                cursor: pointer;
+                outline: none;
+
+                &:hover{
+                    opacity: .7;
+                }
+                &:active {
+                    box-shadow: 0 1px gray;
+                    transform: translate(.2px,.2px);
+                 }
+            }
+        }
+    }
+
+    
+}
