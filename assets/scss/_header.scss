@@ -1,21 +1,36 @@
 .header{
     width: 100%;
     padding-bottom: 40px;
+    
 
     
     .header-content{
         background: $backgroundColor;
         width: 100%;
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         padding: 15px 60px 0;
         height: 88px;
         z-index: 10;
 
-        .header-burger-btn{
-            display: none;
-        }
+        @media (max-width: 575px) {
+            padding: 15px 30px;
+          }
+          @media (min-width: 576px) and (max-width: 767px) {
+            padding: 15px 30px;
+          }
+          @media (min-width: 768px) and (max-width: 991px) {
+    
+            padding: 15px 30px;
+          }
+          @media (min-width: 992px) and (max-width: 1199px) {
+    
+            padding: 15px 30px;
+          }
+        
+
+        
 
         .logo{
             float: left;
@@ -35,10 +50,8 @@
         .menu-container{
             
             .menu{
-    
-                
-                float: right;
-    
+                    float: right;
+                    display: block;
                 .fab{
                     padding-right: 10px;
                 }
@@ -115,6 +128,20 @@
     
                 
             }
+            
+            .menu-mobile{
+                display: none;
+                .header-burger-btn{
+                    
+                    float: right;
+        
+                    .fas{
+                        font-size: 2rem;
+                        color: black;
+                        margin-top: 5px;
+                    }
+                }
+            }
         }
 
         
@@ -140,22 +167,11 @@
         .menu-container{
 
             .menu{
-                display: none;
+                display: none !important;
             }
             
             .menu-mobile{
-                display: block;
-    
-                .header-burger-btn{
-                    float: right;
-                    display: block;
-            
-                        .fas{
-                            font-size: 2rem;
-                            color: black;
-                            margin-top: 5px;
-                        }
-                    }
+                display: block !important;
             }
         }
     }
@@ -177,47 +193,38 @@
         .menu-container{
 
             .menu{
-                display: none;
+                display: none !important;
             }
             
             .menu-mobile{
-                display: block;
-    
-                .header-burger-btn{
-                    float: right;
-                    display: block;
-            
-                        .fas{
-                            font-size: 2rem;
-                            color: black;
-                            margin-top: 5px;
-                        }
-                    }
+                display: block !important;
             }
         }
     }
 
     // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991px) {
-        .menu-container{
+
+        .logo{
+            float: left;
             
+            h1{
+                color: $textColor1;
+                font-size: 1.5rem;
+                letter-spacing: 1.8px;
+                font-weight: 300;
+                padding-top: 10px !important;
+            }
+        }
+
+        .menu-container{
+
             .menu{
-                float: right;
-    
-                .fab{
-                    padding-right: 0px !important;
-                }
-
-                a{
-                    padding: 0 5px !important;
-                }
-
-                button{
-                    padding: 12px 16px !important;
-                }
-                
-    
-                
+                display: none !important;
+            }
+            
+            .menu-mobile{
+                display: block !important;
             }
         }
     }
@@ -235,12 +242,68 @@
 }
 
 #pop-menu{
-    background: red;
+
+        
+    background: $backgroundColor;
     position: fixed;
+    transform: translate3d(0, 100%, 0);
+    width: 100%;
     top: 0;
-    left: 0;
     right: 0;
+    left: 0;
     bottom: 0;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: all .5s ease-in-out;
 
+    .menu-icon{
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        padding: 15px 15px;
+        .fas{
+        
+        font-size: 2rem;
+    
+        &:hover{
+            color: $textColor2;
+        }
+    
+        }
+    }
+
+    
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        
+
+        a{
+            font-size: 3rem;
+            text-align: center;
+            text-decoration: none;
+            margin: 1.5rem 0;
+            color: $textColor1;
+            transition: all 0.5s ease-in;
+
+            &:hover{
+                color: $textColor2;
+                border-bottom: 1px solid $textColor1;;
+            }
+        }
+    }
+
+}
+
+.menu-active{
+    #pop-menu{
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        transform: translate3d(0,0,0);
+    }
 }

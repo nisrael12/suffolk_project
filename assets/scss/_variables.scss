@@ -9,3 +9,9 @@ $buttonColor: #918f76;
 
     border-bottom: 1px solid $textColor1;
 }
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

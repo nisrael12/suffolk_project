@@ -1,8 +1,9 @@
-.wrapper-container{
-    padding: 0 60px;
+.content-container{
+
     
     
     .photo-1{
+        width: 100%;
         
         .photo-container{
             position: relative;
@@ -48,7 +49,8 @@
             img{
                 position: relative;
                 width: 100%;
-                height: 800px;
+                max-height: 800px;
+                // height: auto;
                 object-fit: cover;
                 z-index: -1;
                 filter: brightness(.8) ;
@@ -77,10 +79,14 @@
 
     .info-content{
         margin-bottom: 90px;
+       
 
         .info-wrapper{
             display: flex;
             justify-content: center;
+            width: 100%;
+
+            
             
             .rooms{
                 margin-right: 20px;
@@ -95,7 +101,9 @@
                 color: $textColor2;
                 
                 img{
-                width: 600px;
+                width: 100%;
+                max-width: 600px;
+                height: auto;
                 }
                 
                 
@@ -167,6 +175,86 @@
             
             
         }
+    }
+
+
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575px) { 
+
+
+        .photo-1{
+        
+            .photo-container{
+                
+                .book{
+                    width: 90% !important;
+    
+                    h1{
+                        font-size: 1.5rem !important;
+                    }
+    
+                }
+                
+                
+            }
+        }
+        
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767px) {
+
+        .photo-1{
+        
+            .photo-container{
+                
+                .book{
+                    width: 90% !important;
+    
+                    h1{
+                        font-size: 1.5rem !important;
+                    }
+    
+                }
+                
+                
+            }
+        }
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991px) {
+        .photo-1{
+        
+            .photo-container{
+                
+                .book{
+                    width: 80% !important;
+                    z-index: 1;
+    
+                    h1{
+                        font-size: 2.5rem !important;
+                        margin-bottom: 1.5rem;
+                    }
+    
+                }
+                
+                
+            }
+        }
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+
+       
+        
+    }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        
     }
 }
 

@@ -12,10 +12,9 @@
 @import "footer";
 
 
-
 body {
-  line-height: 1;
   background: $backgroundColor;
+  
 }
 
 ol,
@@ -43,4 +42,33 @@ table {
 
 body {
   font-family: "proxima-nova",Helvetica,"Helvetica Neue",Arial,sans-serif; 
+  .wrapper{
+    width: 100%;
+    
+
+    
+    .content-container{
+      width: 100%;
+      padding: 0 60px;
+      
+
+      @media (max-width: 575px) {
+        padding: 0 30px;
+      }
+      @media (min-width: 576px) and (max-width: 767px) {
+        padding: 0 30px;
+      }
+      @media (min-width: 768px) and (max-width: 991px) {
+
+        padding: 0 30px;
+      }
+      @media (min-width: 992px) and (max-width: 1199px) {
+
+        padding: 0 30px;
+      }
+    }
+  }
+
 }
+
+
