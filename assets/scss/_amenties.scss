@@ -5,9 +5,12 @@
         display: flex;
         justify-content: center;
         text-align: center;
+        
 
         .amenties-content{
             margin-bottom: 120px;
+            width: 60%;
+
             .title{
                 margin-bottom: 60px;
 
@@ -38,4 +41,12 @@
         }
 
     }
+
+    @media (max-width: 575px) { 
+        .amenties-content{
+            width: 93% !important;
+            margin-top: 15% !important;
+
+        }
+    }    
 }
