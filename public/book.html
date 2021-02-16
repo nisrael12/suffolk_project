@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
   </head>
-  <body>
+  <body data-barba="wrapper">
 
     <div class="wrapper">
 
@@ -63,149 +63,142 @@
         </div>
   
       </section>
-  
-      <section id="pop-menu">
-        <div class="menu-icon">
-          <i class="fas fa-times"></i>
-        </div>
-        <nav>
-          <a href="#">About</a>
-          <a href="#">Gallery</a>
-          <a href="#">Visit</a>
-          <a href="#">Contact</a>
-        </nav>
-      </section>
 
-      <div class="wrapper-container">
-  
-        <section class="contact-container">
-  
-          <div class="contact">
-            
-            <div class="title">
-              <h1>Book a Room</h1>
-              <p>
-                If your dates are at all flexible, please let us know. We book up quickly, especially on summer weekends, but would love to find a way to host you.
-              </p>
-            </div>
-            
+      <main data-barba="container" data-barba-namespace="book">
+
+        <div class="wrapper-container">
     
-            <div class="contact-form">
-                <form action="">
-  
-                  <label for="fname">Name<span>*</span></label>
-                  <div class="form-field name">
-                      
-                      <div class="first">
-                          <input name="name" type="text" required/>
-                          <label for="fname" class="name-style">First Name</label>
-                      </div>
-                      <div class="last">
-                          <input name="name" type="text" required/>
-                          <label for="fname" class="name-style">Last Name</label>
-                      </div>
-                  </div>
-  
-                  <div class="form-field email">
-                      <label for="fname">Email<span>*</span></label>
-                      <input name="email" type="email" required/>
-                  </div>
-  
-                  <label for="fname">Phone<span>*</span></label>
-                  <div class="form-field name">
-                    <div class="phone">
-                        <div class="field">
-                          <input type="tel" id="phone" name="phone" maxlength="3" pattern="[0-9]{3}">
-                          <label for="fname" class="name-style">(###)</label>
+          <section class="contact-container">
+    
+            <div class="contact">
+              
+              <div class="title">
+                <h1>Book a Room</h1>
+                <p>
+                  If your dates are at all flexible, please let us know. We book up quickly, especially on summer weekends, but would love to find a way to host you.
+                </p>
+              </div>
+              
+      
+              <div class="contact-form">
+                  <form action="">
+    
+                    <label for="fname">Name<span>*</span></label>
+                    <div class="form-field name">
+                        
+                        <div class="first">
+                            <input name="name" type="text" required/>
+                            <label for="fname" class="name-style">First Name</label>
                         </div>
-                        <div class="field">
-                          <input type="tel" id="phone" name="phone" maxlength="3" pattern="[0-9]{3}">
-                          <label for="fname" class="name-style">###</label>
+                        <div class="last">
+                            <input name="name" type="text" required/>
+                            <label for="fname" class="name-style">Last Name</label>
                         </div>
-                        <div class="field">
-                          <input type="tel" id="phone" name="phone" maxlength="4" pattern="[0-9]{3}">
-                          <label for="fname" class="name-style">####</label>
+                    </div>
+    
+                    <div class="form-field email">
+                        <label for="fname">Email<span>*</span></label>
+                        <input name="email" type="email" required/>
+                    </div>
+    
+                    <label for="fname">Phone<span>*</span></label>
+                    <div class="form-field name">
+                      <div class="phone">
+                          <div class="field">
+                            <input type="tel" id="phone" name="phone" maxlength="3" pattern="[0-9]{3}">
+                            <label for="fname" class="name-style">(###)</label>
+                          </div>
+                          <div class="field">
+                            <input type="tel" id="phone" name="phone" maxlength="3" pattern="[0-9]{3}">
+                            <label for="fname" class="name-style">###</label>
+                          </div>
+                          <div class="field">
+                            <input type="tel" id="phone" name="phone" maxlength="4" pattern="[0-9]{3}">
+                            <label for="fname" class="name-style">####</label>
+                          </div>
                         </div>
-                      </div>
-                  </div>
-  
-                  <label for="fname">Date of Arrival<span>*</span></label>
-                  <div class="form-field name">
-                    <div class="arrival">
-                        <div class="field">
-                          <input type="text" id="month" name="month" maxlength="2">
-                          <label for="fname" class="name-style">MM</label>
+                    </div>
+    
+                    <label for="fname">Date of Arrival<span>*</span></label>
+                    <div class="form-field name">
+                      <div class="arrival">
+                          <div class="field">
+                            <input type="text" id="month" name="month" maxlength="2">
+                            <label for="fname" class="name-style">MM</label>
+                          </div>
+                          <div class="field">
+                            <input type="text" id="day" name="day" maxlength="2">
+                            <label for="fname" class="name-style">DD</label>
+                          </div>
+                          <div class="field">
+                            <input type="text" id="year" name="year" maxlength="4">
+                            <label for="fname" class="name-style">YYYY</label>
+                          </div>
                         </div>
-                        <div class="field">
-                          <input type="text" id="day" name="day" maxlength="2">
-                          <label for="fname" class="name-style">DD</label>
+                    </div>
+    
+                    <label for="fname">Date of Departure<span>*</span></label>
+                    <div class="form-field name">
+                      <div class="departure">
+                          <div class="field">
+                            <input type="text" id="month" name="month" maxlength="2">
+                            <label for="fname" class="name-style">MM</label>
+                          </div>
+                          <div class="field">
+                            <input type="text" id="day" name="day" maxlength="2">
+                            <label for="fname" class="name-style">DD</label>
+                          </div>
+                          <div class="field">
+                            <input type="text" id="year" name="year" maxlength="4">
+                            <label for="fname" class="name-style">YYYY</label>
+                          </div>
                         </div>
-                        <div class="field">
-                          <input type="text" id="year" name="year" maxlength="4">
-                          <label for="fname" class="name-style">YYYY</label>
-                        </div>
-                      </div>
-                  </div>
-  
-                  <label for="fname">Date of Departure<span>*</span></label>
-                  <div class="form-field name">
-                    <div class="departure">
-                        <div class="field">
-                          <input type="text" id="month" name="month" maxlength="2">
-                          <label for="fname" class="name-style">MM</label>
-                        </div>
-                        <div class="field">
-                          <input type="text" id="day" name="day" maxlength="2">
-                          <label for="fname" class="name-style">DD</label>
-                        </div>
-                        <div class="field">
-                          <input type="text" id="year" name="year" maxlength="4">
-                          <label for="fname" class="name-style">YYYY</label>
-                        </div>
-                      </div>
-                  </div>
-  
-                  <label for="fname">Number of Adults<span>*</span></label>
-                  <div class="form-field name">
-                    <select name="cars" id="cars">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                    </select>
-                  </div>
-  
-                  <label for="fname">Number of Children<span>*</span></label>
-                  <div class="form-field name">
-                    <select name="cars" id="cars">
-                      <option value="0">0</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                    </select>
-                  </div>
-  
-                  <button type="submit"> Submit</button>
-  
-                </form>
+                    </div>
+    
+                    <label for="fname">Number of Adults<span>*</span></label>
+                    <div class="form-field name">
+                      <select name="cars" id="cars">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select>
+                    </div>
+    
+                    <label for="fname">Number of Children<span>*</span></label>
+                    <div class="form-field name">
+                      <select name="cars" id="cars">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select>
+                    </div>
+    
+                    <button type="submit"> Submit</button>
+    
+                  </form>
+              </div>
+    
             </div>
+    
+          </section>
   
-          </div>
-  
-        </section>
+        </div>
+        
+      </main>
 
-      </div>
 
       <section class="footer">
         <div class="footer-container">
@@ -244,7 +237,40 @@
   
       </section>
 
+      <section class="pop-menu">
+        <div class="close-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <nav>
+          <a href="./index.html">Home</a>
+          <a href="./amenties.html">Amenities</a>
+          <a href="./room.html">Rooms & Rates</a>
+          <a href="./gallery.html">Gallery</a>
+          <a href="./visit.html">Visit</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+
+        
+        
+      </section>
+
     </div>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous">
+    </script>
+    <script>
+      $(document).ready(function(){
+        $('.header-burger-btn').on('click', function(){
+          $('.pop-menu').addClass('active');
+        })
+        $('.pop-menu .close-btn').on('click', function(){
+          $('.pop-menu').removeClass('active');
+        })
+      })
+
+    </script>
 
   </body>
 </html>

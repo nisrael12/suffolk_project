@@ -9,6 +9,7 @@
 @import "visit";
 @import "contact";
 @import "book";
+@import "pop-menu";
 @import "footer";
 
 
@@ -42,6 +43,18 @@ table {
 
 body {
   font-family: "proxima-nova",Helvetica,"Helvetica Neue",Arial,sans-serif; 
+  .fade-bg{
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    transform: translate(0, 100%);
+
+  }
+
   .wrapper{
     width: 100%;
     

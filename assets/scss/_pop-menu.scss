@@ -1,0 +1,81 @@
+.pop-menu{
+    background: $backgroundColor;
+    position: fixed;
+    transform: translate(0, 100%);
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+
+    &.active{
+        transform: translate(0,0) !important;
+    }
+
+    .close-btn{
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        padding: 15px 15px;
+        .fas{
+        
+        font-size: 2rem;
+    
+        &:hover{
+            color: $textColor2;
+        }
+    
+        }
+    }
+
+    
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        
+
+        a{
+            font-size: 2rem;
+            text-align: center;
+            text-decoration: none;
+            margin: 1.5rem 0;
+            color: $textColor1;
+            transition: all 0.5s ease-in;
+            border: none;
+            outline: none;
+
+            &:hover{
+                color: $textColor2;
+                border-bottom: 1px solid $textColor1;;
+            }
+        }
+        button{
+            background: $buttonColor;
+            border: none;
+            text-decoration: none;
+            color: $white;
+            font-size: 1.2rem;
+            padding: 20px 32px;
+            cursor: pointer;
+            outline: none;
+
+            &:hover{
+                opacity: .7;
+            }
+            &:active {
+                transform: translate(.2px,.2px);
+             }
+        }
+    }
+
+}
+
+
+

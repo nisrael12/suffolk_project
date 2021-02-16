@@ -14,8 +14,9 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
       <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
     </head>
-  <body>
-    <div class="wrapper">
+    <body data-barba="wrapper">
+
+      <div class="wrapper">
 
       <section class="header sticky">
         <div class="header-content">
@@ -63,59 +64,51 @@
         </div>
   
       </section>
-  
-      <section id="pop-menu">
-        <div class="menu-icon">
-          <i class="fas fa-times"></i>
-        </div>
-        <nav>
-          <a href="#">About</a>
-          <a href="#">Gallery</a>
-          <a href="#">Visit</a>
-          <a href="#">Contact</a>
-        </nav>
-      </section>
 
-      <div class="wrapper-container">
-  
-        <section class="room-container">
-  
-          <div class="room-content">
-            
-            <div class="title">
-              <h1>Rooms & Rates</h1>
+      <main data-barba="container" data-barba-namespace="room">
+        
+        <div class="wrapper-container">
+    
+          <section class="room-container">
+    
+            <div class="room-content">
+              
+              <div class="title">
+                <h1>Rooms & Rates</h1>
+              </div>
+    
+              <div class="rate-container">
+    
+                  <div class="rates">
+                      <h5>Standard Room</h5>
+                      <p class="price">$100/night</p>
+                      <p>A queen-sized bed, high thread count sheets and views of rolling farmland. What more could you need for a weekend away?</p>
+                  </div>
+                  <div class="rates">
+                      <h5>Deluxe Room</h5>
+                      <p class="price">$200/night</p>
+                      <p>Upgrade to a king-sized bed and enjoy a comfortable window reading nook, as well as complimentary breakfast.</p>
+                  </div>
+                  <div class="rates">
+                      <h5>Mountain Suite</h5>
+                      <p class="price">$300/night</p>
+                      <p>Twice the size of our Deluxe rooms with stunning mountain views. Open the windows at night for the freshest air you’ll ever fill your lungs with.</p>
+                  </div>
+                  <div class="rates">
+                      <h5>Lake Suite</h5>
+                      <p class="price">$400/night</p>
+                      <p>A very special, one-of-a-kind room that opens directly onto a private lakeside patio. Our chef would be happy to serve your meals there for a small additional fee.</p>
+                  </div>
+    
+              </div>
+              
+    
             </div>
-  
-            <div class="rate-container">
-  
-                <div class="rates">
-                    <h5>Standard Room</h5>
-                    <p class="price">$100/night</p>
-                    <p>A queen-sized bed, high thread count sheets and views of rolling farmland. What more could you need for a weekend away?</p>
-                </div>
-                <div class="rates">
-                    <h5>Deluxe Room</h5>
-                    <p class="price">$200/night</p>
-                    <p>Upgrade to a king-sized bed and enjoy a comfortable window reading nook, as well as complimentary breakfast.</p>
-                </div>
-                <div class="rates">
-                    <h5>Mountain Suite</h5>
-                    <p class="price">$300/night</p>
-                    <p>Twice the size of our Deluxe rooms with stunning mountain views. Open the windows at night for the freshest air you’ll ever fill your lungs with.</p>
-                </div>
-                <div class="rates">
-                    <h5>Lake Suite</h5>
-                    <p class="price">$400/night</p>
-                    <p>A very special, one-of-a-kind room that opens directly onto a private lakeside patio. Our chef would be happy to serve your meals there for a small additional fee.</p>
-                </div>
-  
-            </div>
-            
-  
-          </div>
-  
-        </section>
-      </div>
+    
+          </section>
+        </div>
+
+      </main>
 
       <section class="footer">
         <div class="footer-container">
@@ -154,6 +147,39 @@
   
       </section>
 
+      <section class="pop-menu">
+        <div class="close-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <nav>
+          <a href="./index.html">Home</a>
+          <a href="./amenties.html">Amenities</a>
+          <a href="./gallery.html">Gallery</a>
+          <a href="./visit.html">Visit</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./book.html" class="btn-style"><button type="button"> Book a Room</button></a>
+        </nav>
+
+        
+        
+      </section>
+
     </div>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous">
+    </script>
+    <script>
+      $(document).ready(function(){
+        $('.header-burger-btn').on('click', function(){
+          $('.pop-menu').addClass('active');
+        })
+        $('.pop-menu .close-btn').on('click', function(){
+          $('.pop-menu').removeClass('active');
+        })
+      })
+
+    </script>
   </body>
 </html>

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
   </head>
-  <body>
+  <body data-barba="wrapper">
     
     <div class="wrapper">
 
@@ -63,74 +63,67 @@
         </div>
   
       </section>
-  
-      <section id="pop-menu">
-        <div class="menu-icon">
-          <i class="fas fa-times"></i>
-        </div>
-        <nav>
-          <a href="#">About</a>
-          <a href="#">Gallery</a>
-          <a href="#">Visit</a>
-          <a href="#">Contact</a>
-        </nav>
-      </section>
 
-      <div class="wrapper-container">
-  
-        <section class="contact-container">
-  
-          <div class="contact">
-            
-            <div class="title">
-              <h1>Contact Us</h1>
-              <p>
-                  Question? Suggestion? Special request? Get in contact through the form below and we’ll reply as soon as we can.
-              </p>
-            </div>
-            
+      <main data-barba="container" data-barba-namespace="contact">
+
+        <div class="wrapper-container">
     
-            <div class="contact-form">
-                <form action="">
-  
-                  <label for="fname">Name<span>*</span></label>
-                  <div class="form-field name">
-                      
-                      <div class="first">
-                          <input name="name" type="text" required/>
-                          <label for="fname" class="name-style">First Name</label>
-                      </div>
-                      <div class="last">
-                          <input name="name" type="text" required/>
-                          <label for="fname" class="name-style">Last Name</label>
-                      </div>
-                  </div>
-  
-                  <div class="form-field email">
-                      <label for="fname">Email<span>*</span></label>
-                      <input name="email" type="email" required/>
-                  </div>
-  
-                  <div class="form-field subject">
-                      <label for="fname">Subject<span>*</span></label>
-                      <input name="text" type="text" required/>
-                  </div>
-  
-                  <div class="form-field message">
-                      <label for="fname">Message<span>*</span></label>
-                      <textarea cols="30" rows="8" required></textarea>
-                  </div>
-  
-                  <button type="submit"> Submit</button>
-  
-                </form>
+          <section class="contact-container">
+    
+            <div class="contact">
+              
+              <div class="title">
+                <h1>Contact Us</h1>
+                <p>
+                    Question? Suggestion? Special request? Get in contact through the form below and we’ll reply as soon as we can.
+                </p>
+              </div>
+              
+      
+              <div class="contact-form">
+                  <form action="">
+    
+                    <label for="fname">Name<span>*</span></label>
+                    <div class="form-field name">
+                        
+                        <div class="first">
+                            <input name="name" type="text" required/>
+                            <label for="fname" class="name-style">First Name</label>
+                        </div>
+                        <div class="last">
+                            <input name="name" type="text" required/>
+                            <label for="fname" class="name-style">Last Name</label>
+                        </div>
+                    </div>
+    
+                    <div class="form-field email">
+                        <label for="fname">Email<span>*</span></label>
+                        <input name="email" type="email" required/>
+                    </div>
+    
+                    <div class="form-field subject">
+                        <label for="fname">Subject<span>*</span></label>
+                        <input name="text" type="text" required/>
+                    </div>
+    
+                    <div class="form-field message">
+                        <label for="fname">Message<span>*</span></label>
+                        <textarea cols="30" rows="8" required></textarea>
+                    </div>
+    
+                    <button type="submit"> Submit</button>
+    
+                  </form>
+              </div>
+    
             </div>
+    
+          </section>
   
-          </div>
-  
-        </section>
+        </div>
 
-      </div>
+      </main>
+
       
       <section class="footer">
         <div class="footer-container">
@@ -168,7 +161,39 @@
         </div>
   
       </section>
-    </div>
+      <section class="pop-menu">
+        <div class="close-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <nav>
+          <a href="./index.html">Home</a>
+          <a href="./amenties.html">Amenities</a>
+          <a href="./room.html">Rooms & Rates</a>
+          <a href="./gallery.html">Gallery</a>
+          <a href="./visit.html">Visit</a>
+          <a href="./book.html" class="btn-style"><button type="button"> Book a Room</button></a>
+        </nav>
 
+        
+        
+      </section>
+
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous">
+    </script>
+    <script>
+      $(document).ready(function(){
+        $('.header-burger-btn').on('click', function(){
+          $('.pop-menu').addClass('active');
+        })
+        $('.pop-menu .close-btn').on('click', function(){
+          $('.pop-menu').removeClass('active');
+        })
+      })
+
+    </script>
   </body>
 </html>
