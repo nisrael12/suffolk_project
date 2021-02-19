@@ -1,11 +1,11 @@
-.galley-container{
+.gallery-container{
     margin-top: 8%;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
 
-    // Extra small devices (portrait phones, less than 576px)
+   // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575px) { 
     grid-template-columns: 1fr;
     column-gap: 0px;
@@ -23,16 +23,18 @@
     grid-template-columns: 1fr;
     column-gap: 0px;
     }
-    .white-bg .hover-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 300px;
-        background: rgba(0,0,0,0.5);
-        transition: all .4s ease-in-out;
-        cursor: pointer;
-
+    
+    
+    // .white-bg .hover-bg {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 300px;
+    //     background: rgba(0,0,0,0.5);
+    //     transition: all .4s ease-in-out;
+    //     cursor: pointer;
+    // }
     
     .left-gallery{
         margin-left: 5%;
@@ -148,4 +150,13 @@
         }
     }
     
-}}
+}
+
+
+
+
+
+
+
+
+ 
