@@ -29,6 +29,8 @@ const homeAnimation = () => {
     let tl = gsap.timeline()
     
     headerAnimation();
+    loadingEnter();
+    
 
     tl.fromTo('.photo-1', {
         opacity: 0,
@@ -48,6 +50,9 @@ const homeAnimation = () => {
     }, 
     '>-1.5'
     )
+
+    homeController();
+    controller();
 }
 
 // Delay
@@ -306,3 +311,54 @@ barba.init({
       }
     ]
 });
+
+
+// Scroll Animation
+const tlServicesScroll = new gsap.timeline({
+    onUpdate: debugPercentage
+})
+
+function debugPercentage(){
+    console.log(tlServicesScroll.progress())
+}
+
+tlServicesScroll.fromTo('#hotel-content', {
+    opacity: 0,
+},{
+    opacity: 1
+})
+
+const serviceElement = document.querySelector('#hotel-content');
+
+
+let homeController = new ScrollMagic.Controller();
+
+let controller = new ScrollMagic.Controller({
+    globalSceneOptions: {
+        triggerHook: 'onLeave',
+        duration: 150 // this works just fine with duration 0 as well
+        // However with large numbers (>20) of pinned sections display errors can occur so every section should be unpinned once it's covered by the next section.
+        // Normally 100% would work for this, but here 200% is used, as Panel 3 is shown for more than 100% of scrollheight due to the pause.
+    }
+});
+
+const slides = document.querySelectorAll("section.panel");
+
+for (var i=0; i<slides.length; i++) {
+    new ScrollMagic.Scene({
+            triggerElement: slides[i]
+        });
+    }
+
+let serviceScene = new ScrollMagic.Scene({
+    triggerElement: '#hotel-content',
+    triggerHook: .2,
+    duration: 200,
+    reverse: false
+})
+
+.setPin(slides[i], {pushFollowers: false})
+.setTween(tlServicesScroll)
+.addIndicators()
+.addTo(homeController)
+.addTo(controller)
