@@ -261,6 +261,28 @@ barba.init({
                 loadingLeave();
             },
             async enter(data){
+                loadingEnter();
+                galleryEnter();
+                console.log('Entering Page Animation')
+            }
+
+        },
+        {
+            name: 'gallery-transition',
+
+            from: {
+                namespace: ['home', 'amenties', 'gallery', 'room', 'visit', 'contact', 'book']
+            },
+            to: {
+                namespace: ['gallery']
+            },
+
+            async leave(data){
+                console.log('Leaving Page Animation')
+                await delay(1500);
+                loadingLeave();
+            },
+            async enter(data){
                 loadingEnter();;
                 console.log('Entering Page Animation')
             }
@@ -362,3 +384,15 @@ let serviceScene = new ScrollMagic.Scene({
 .addIndicators()
 .addTo(homeController)
 .addTo(controller)
+
+let galleryController = new ScrollMagic.Controller();
+
+new ScrollMagic.Scene({
+    triggerElement: "#trigger1",
+    triggerHook: 0.9, // show, when scrolled 10% into view
+    duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
+    offset: 50 // move trigger to center of element
+})
+.setClassToggle("photo", "visible") // add class to reveal
+.addIndicators() // add indicators (requires plugin)
+.addTo(galleryController);
