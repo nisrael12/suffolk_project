@@ -89,20 +89,20 @@ const galleryEnter = () => {
     let timeline= gsap.timeline();
     timeline
     .fromTo(
-        '.white-bg',
+        '.photo' ,'.white-bg',
         {
             y:50,
             opacity: 0
         },{
             y:0,
             opacity:1,
-            duration: .8,
+            duration: .4,
             ease: 'power1.inOut'
         }
     )
     timeline
     .fromTo(
-        '.photo ,.white-bg',
+        '.photo' , '.white-bg',
         {
             y:50,
             opacity: 0
@@ -262,7 +262,6 @@ barba.init({
             },
             async enter(data){
                 loadingEnter();
-                galleryEnter();
                 console.log('Entering Page Animation')
             }
 
@@ -283,7 +282,8 @@ barba.init({
                 loadingLeave();
             },
             async enter(data){
-                loadingEnter();;
+                loadingEnter();
+                galleryEnter();
                 console.log('Entering Page Animation')
             }
 
@@ -298,7 +298,7 @@ barba.init({
         namespace: 'gallery',
         afterEnter(data) {
         loadingEnter();
-          headerAnimation();
+        galleryEnter();
         }
         }, {
         namespace: 'amenties',
@@ -381,18 +381,5 @@ let serviceScene = new ScrollMagic.Scene({
 
 .setPin(slides[i], {pushFollowers: false})
 .setTween(tlServicesScroll)
-.addIndicators()
 .addTo(homeController)
 .addTo(controller)
-
-let galleryController = new ScrollMagic.Controller();
-
-new ScrollMagic.Scene({
-    triggerElement: "#trigger1",
-    triggerHook: 0.9, // show, when scrolled 10% into view
-    duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
-    offset: 50 // move trigger to center of element
-})
-.setClassToggle("photo", "visible") // add class to reveal
-.addIndicators() // add indicators (requires plugin)
-.addTo(galleryController);
