@@ -1,75 +1,50 @@
-.gallery-container{
-    margin-top: 8%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 30px;
+#gallery{
 
-   // Extra small devices (portrait phones, less than 576px)
-    @media (max-width: 575px) { 
-    grid-template-columns: 1fr;
-    column-gap: 0px;
+    .wrapper-container{
+        margin-top: 0%;
+    
+    
+    .gallery-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+    
         
-    }
-
-    // Small devices (landscape phones, 576px and up)
-    @media (min-width: 576px) and (max-width: 767px) {
-    grid-template-columns: 1fr;
-    column-gap: 0px;
-    }
-
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991px) {
-    grid-template-columns: 1fr;
-    column-gap: 0px;
-    }
     
-    
-    // .white-bg .hover-bg {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 300px;
-    //     background: rgba(0,0,0,0.5);
-    //     transition: all .4s ease-in-out;
-    //     cursor: pointer;
-    // }
-    
-    .left-gallery{
-        margin-left: 5%;
-
-        .photo{
-            cursor: zoom-in;
-
-            img{
-                width: 100%;
-                margin-bottom: 5%;
-            }
-        }
-    }
-
-    .right-gallery{
-        margin-right: 5%;
-
-        .photo{
-            cursor: zoom-in;
+       // Extra small devices (portrait phones, less than 576px)
+        @media (max-width: 575px) { 
+        grid-template-columns: 1fr;
+        column-gap: 0px;
             
-            img{
-                width: 100%;
-                max-height: 1200px;
-                object-fit: cover;
-                margin-bottom: 5%;
-    
-            }
         }
-
-    }
-
-
-    @media (max-width: 575px) { 
+    
+        // Small devices (landscape phones, 576px and up)
+        @media (min-width: 576px) and (max-width: 767px) {
+        grid-template-columns: 1fr;
+        column-gap: 0px;
+        }
+    
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) and (max-width: 991px) {
+        grid-template-columns: 1fr;
+        column-gap: 0px;
+        }
+        
+        
+        // .white-bg .hover-bg {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 300px;
+        //     background: rgba(0,0,0,0.5);
+        //     transition: all .4s ease-in-out;
+        //     cursor: pointer;
+        // }
+        
         .left-gallery{
-            margin: 0 5%;
+            margin-left: 5%;
     
             .photo{
                 cursor: zoom-in;
@@ -80,77 +55,111 @@
                 }
             }
         }
+    
         .right-gallery{
-            margin: 0 5%;
+            margin-right: 5%;
     
             .photo{
                 cursor: zoom-in;
-    
+                
                 img{
                     width: 100%;
-                    max-height: 300px !important;
+                    max-height: 1200px;
+                    object-fit: cover;
                     margin-bottom: 5%;
+        
+                }
+            }
+    
+        }
+    
+    
+        @media (max-width: 575px) { 
+            .left-gallery{
+                margin: 0 5%;
+        
+                .photo{
+                    cursor: zoom-in;
+        
+                    img{
+                        width: 100%;
+                        margin-bottom: 5%;
+                    }
+                }
+            }
+            .right-gallery{
+                margin: 0 5%;
+        
+                .photo{
+                    cursor: zoom-in;
+        
+                    img{
+                        width: 100%;
+                        max-height: 300px !important;
+                        margin-bottom: 5%;
+                    }
                 }
             }
         }
+    
+        @media (min-width: 576px) and (max-width: 767px) { 
+            .left-gallery{
+                margin: 0 5%;
+        
+                .photo{
+                    cursor: zoom-in;
+        
+                    img{
+                        width: 100%;
+                        margin-bottom: 5%;
+                    }
+                }
+            }
+            .right-gallery{
+                margin: 0 5%;
+        
+                .photo{
+                    cursor: zoom-in;
+        
+                    img{
+                        width: 100%;
+                        max-height: 300px !important;
+                        margin-bottom: 5%;
+                    }
+                }
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 991px) { 
+            .left-gallery{
+                margin: 0 5%;
+        
+                .photo{
+                    cursor: zoom-in;
+        
+                    img{
+                        width: 100%;
+                        margin-bottom: 5%;
+                    }
+                }
+            }
+            .right-gallery{
+                margin: 0 5%;
+        
+                .photo{
+                    cursor: zoom-in;
+        
+                    img{
+                        width: 100%;
+                        max-height: 500px !important;
+                        margin-bottom: 5%;
+                    }
+                }
+            }
+        }
+    
     }
-
-    @media (min-width: 576px) and (max-width: 767px) { 
-        .left-gallery{
-            margin: 0 5%;
-    
-            .photo{
-                cursor: zoom-in;
-    
-                img{
-                    width: 100%;
-                    margin-bottom: 5%;
-                }
-            }
-        }
-        .right-gallery{
-            margin: 0 5%;
-    
-            .photo{
-                cursor: zoom-in;
-    
-                img{
-                    width: 100%;
-                    max-height: 300px !important;
-                    margin-bottom: 5%;
-                }
-            }
-        }
     }
-    
-    @media (min-width: 768px) and (max-width: 991px) { 
-        .left-gallery{
-            margin: 0 5%;
-    
-            .photo{
-                cursor: zoom-in;
-    
-                img{
-                    width: 100%;
-                    margin-bottom: 5%;
-                }
-            }
-        }
-        .right-gallery{
-            margin: 0 5%;
-    
-            .photo{
-                cursor: zoom-in;
-    
-                img{
-                    width: 100%;
-                    max-height: 500px !important;
-                    margin-bottom: 5%;
-                }
-            }
-        }
-    }
-    
 }
 
 

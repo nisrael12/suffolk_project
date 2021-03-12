@@ -89,7 +89,7 @@ const galleryEnter = () => {
     let timeline= gsap.timeline();
     timeline
     .fromTo(
-        '.photo' ,'.white-bg',
+        '.photo .white-bg',
         {
             y:50,
             opacity: 0
@@ -102,7 +102,7 @@ const galleryEnter = () => {
     )
     timeline
     .fromTo(
-        '.photo' , '.white-bg',
+        '.photo .white-bg',
         {
             y:50,
             opacity: 0
@@ -283,7 +283,6 @@ barba.init({
             },
             async enter(data){
                 loadingEnter();
-                galleryEnter();
                 console.log('Entering Page Animation')
             }
 
