@@ -356,8 +356,10 @@ let homeController = new ScrollMagic.Controller();
 
 let controller = new ScrollMagic.Controller({
     globalSceneOptions: {
-        triggerHook: 'onLeave',
-        duration: 150 // this works just fine with duration 0 as well
+        triggerElement: '#hotel-content',
+        duration: 0,
+        triggerHook: .7,
+        offset:50, // this works just fine with duration 0 as well
         // However with large numbers (>20) of pinned sections display errors can occur so every section should be unpinned once it's covered by the next section.
         // Normally 100% would work for this, but here 200% is used, as Panel 3 is shown for more than 100% of scrollheight due to the pause.
     }
@@ -373,8 +375,9 @@ for (var i=0; i<slides.length; i++) {
 
 let serviceScene = new ScrollMagic.Scene({
     triggerElement: '#hotel-content',
-    triggerHook: .2,
-    duration: 200,
+    triggerHook: .9,
+    offset:50,
+    duration: 100,
     reverse: false
 })
 
